@@ -1,0 +1,22 @@
+{
+  "short_name": "Quick Links",
+  "name": "SSC HUB",
+  "icons": [
+    {
+      "src": "https://files.catbox.moe/7z38fh.jpg",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://files.catbox.moe/7z38fh.jpg",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "./index.html",
+  "scope": "./",
+  "background_color": "#ffffff",
+  "theme_color": "#007bff",
+  "display": "standalone",
+  "orientation": "portrait"
+}

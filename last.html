@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Abroad in United States 2026 Complete Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* --- Tight Left Sidebar Layout (Zero Extra Padding) --- */
+        .page-layout {
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+            gap: 10px;
+            padding-top: 50px;
+            padding-left: 0;
+        }
+
+        .sidebar-left {
+            width: 300px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            position: sticky;
+            top: 60px;
+            height: fit-content;
+        }
+
+        .main-content {
+            flex: 1;
+            width: calc(100% - 320px);
+            max-width: none;
+        }
+
+        /* Mobile View Adjustments */
+        @media (max-width: 1024px) {
+            .sidebar-left {
+                display: none;
+            }
+            .main-content {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+
+        .floating-banner {
+            position: fixed;
+            top: 42px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 92%;
+            max-width: 600px;
+            background-color: #D68A00;
+            color: #000;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 16px;
+            z-index: 1000;
+            border-radius: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            animation: blinker 1.5s linear infinite;
+        }
+        @keyframes blinker {
+            50% { opacity: 0.3; }
+        }
+        .page-counter-bar {
+            position: fixed;
+            top: 1px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 92%;
+            max-width: 600px;
+            background-color: #1e2121;
+            color: #f7fafa;
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 15px;
+            font-weight: bold;
+            font-size: 14px;
+            z-index: 999;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            border: 1px solid #ddd;
+        }
+        .ad-container {
+            text-align: center;
+            background: #fff;
+            padding: 10px;
+            margin: 10px 0;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+        .ad-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        .action-section {
+            text-align: center;
+            padding: 20px;
+            background: #fff;
+            margin: 10px 0;
+        }
+        .timer-btn {
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: not-allowed;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .scroll-btn, .continue-btn {
+            background-color: #f70202;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            display: none;
+            margin: 0 auto;
+            text-decoration: none;
+        }
+        .continue-btn {
+            background-color: #00b300;
+        }
+        .scroll-btn:hover {
+            background-color: #0b7dda;
+        }
+        .continue-btn:hover {
+            background-color: #000;
+        }
+        .content-box {
+            padding: 20px;
+            background: #fff;
+        }
+        h1 { font-size: 22px; color: #111; }
+        p { font-size: 14px; margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+
+    <div id="topFloatingBanner" class="floating-banner">
+         Site ko अच्छी तरह से लोड होने दीजिये , उसके बाद ही Scroll कीजिये l
+    </div>
+
+    <div class="page-counter-bar">
+        <span>𝐋𝐚𝐬𝐭 𝐏𝐚𝐠𝐞</span>
+        <span>03</span>
+    </div>
+
+    <div class="page-layout">
+
+        <!-- SIRF LEFT SIDEBAR ADS -->
+        <aside class="sidebar-left">
+            <div class="ad-container"><img src="bike-banner.jpg" alt="Left Ad 1"></div>
+            <div class="ad-container"><img src="hospital-banner.jpg" alt="Left Ad 2"></div>
+        </aside>
+
+        <!-- MAIN CONTENT AREA -->
+        <main class="main-content">
+            <div class="ad-container"><img src="bike-banner.jpg" alt="Advertisement 1"></div>
+            <div class="ad-container"><img src="bike-banner.jpg" alt="Advertisement 2"></div>
+
+            <div class="action-section">
+                <button id="timerButton" class="timer-btn">𝐏𝐥𝐞𝐚𝐬𝐞 𝐖𝐚𝐢𝐭... <span id="countdown">10</span>s</button>
+                <br>
+                <a href="#second-verify-section" id="firstVerifyBtn" class="scroll-btn" onclick="showSecondVerify(event)">𝐕𝐞𝐫𝐢𝐟𝐲 𝐏𝐥𝐞𝐚𝐬𝐞</a>
+            </div>
+      
+            <div class="ad-container"><img src="hospital-banner.jpg" alt="Advertisement 3"></div>
+            <div class="ad-container"><img src="bike-banner.jpg" alt="Advertisement 4"></div>
+
+            <div class="content-box">
+                <h1>Fitness and Healthy Living: A Complete Guide</h1>
+                <p>In today’s fast-paced world, fitness is no longer just a trend—it has become a necessity.</p>
+                <h2>Eye Health and Vision Care: Protecting Your Sight</h2>
+                <p>Vision is one of the most vital senses, yet eye health is often overlooked until noticeable problems arise.</p>
+            </div>
+
+            <div class="action-section" id="second-verify-section">
+                <a href="#third-continue-section" id="secondVerifyBtn" class="scroll-btn" onclick="showContinue(event)">𝐕𝐄𝐑𝐈𝐅𝐘 𝐀𝐆𝐀𝐈𝐍</a>
+            </div>
+
+            <div class="ad-container"><img src="hospital-banner.jpg" alt="Advertisement 5"></div>
+            <div class="ad-container"><img src="bike-banner.jpg" alt="Advertisement 6"></div>
+
+            <div class="action-section" id="third-continue-section">
+                <a href="#" target="_blank" id="continueBtn" class="continue-btn">𝐆𝐞𝐭 𝐋𝐢𝐧𝐤</a>
+            </div>
+
+            <div class="ad-container"><img src="hospital-banner.jpg" alt="Advertisement 7"></div>
+            <div class="ad-container"><img src="bike-banner.jpg" alt="Advertisement 8"></div>
+        </main>
+
+    </div>
+
+    <script>
+    let timeLeft = 10;
+    const countdownEl = document.getElementById("countdown");
+    const timerBtn = document.getElementById("timerButton");
+    const firstVerifyBtn = document.getElementById("firstVerifyBtn");
+    const secondVerifyBtn = document.getElementById("secondVerifyBtn");
+    const continueBtn = document.getElementById("continueBtn");
+    const topFloatingBanner = document.getElementById("topFloatingBanner");
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const encodedDest = urlParams.get('dest');
+
+    if (encodedDest) {
+        try {
+            const decodedUrl = decodeURIComponent(atob(encodedDest));
+            continueBtn.href = decodedUrl;
+        } catch(e) {
+            console.log("Invalid destination URL");
+        }
+    }
+
+    const timerInterval = setInterval(() => {
+        timeLeft--;
+        countdownEl.textContent = timeLeft;
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            timerBtn.style.display = "none";
+            firstVerifyBtn.style.display = "inline-block";
+            if (topFloatingBanner) {
+                topFloatingBanner.style.display = "none";
+            }
+        }
+    }, 1000);
+
+    function showSecondVerify(event) {
+        event.preventDefault();
+        secondVerifyBtn.style.display = "inline-block";
+        document.getElementById("second-verify-section").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function showContinue(event) {
+        event.preventDefault();
+        continueBtn.style.display = "inline-block";
+        document.getElementById("third-continue-section").scrollIntoView({ behavior: 'smooth' });
+    }
+    </script>
+</body>
+</html>
