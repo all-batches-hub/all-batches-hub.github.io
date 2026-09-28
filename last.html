@@ -15,7 +15,6 @@
             scroll-behavior: smooth;
         }
 
-        /* --- Tight Left Sidebar Layout (Zero Extra Padding) --- */
         .page-layout {
             display: flex;
             justify-content: flex-start;
@@ -44,7 +43,6 @@
             max-width: none;
         }
 
-        /* Mobile View Adjustments */
         @media (max-width: 1024px) {
             .sidebar-left {
                 display: none;
@@ -153,6 +151,11 @@
         }
         h1 { font-size: 22px; color: #111; }
         p { font-size: 14px; margin-bottom: 15px; }
+
+        /* Step-wise Hide/Show CSS */
+        #step-2-section, #step-3-section {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -168,7 +171,7 @@
 
     <div class="page-layout">
 
-        <!-- SIRF LEFT SIDEBAR ADS -->
+        <!-- LEFT SIDEBAR ADS -->
         <aside class="sidebar-left">
             <div class="ad-container"><img src="bike-banner.jpg" alt="Left Ad 1"></div>
             <div class="ad-container"><img src="hospital-banner.jpg" alt="Left Ad 2"></div>
@@ -176,38 +179,47 @@
 
         <!-- MAIN CONTENT AREA -->
         <main class="main-content">
-            <div class="ad-container"><img src="bike-banner.jpg" alt="Advertisement 1"></div>
-            <div class="ad-container"><img src="bike-banner.jpg" alt="Advertisement 2"></div>
+            <!-- STEP 1 PORTION -->
+            <div id="step-1-section">
+                <div class="ad-container"><img src="bike-banner.jpg" alt="Advertisement 1"></div>
+                <div class="ad-container"><img src="bike-banner.jpg" alt="Advertisement 2"></div>
 
-            <div class="action-section">
-                <button id="timerButton" class="timer-btn">𝐏𝐥𝐞𝐚𝐬𝐞 𝐖𝐚𝐢𝐭... <span id="countdown">10</span>s</button>
-                <br>
-                <a href="#second-verify-section" id="firstVerifyBtn" class="scroll-btn" onclick="showSecondVerify(event)">𝐕𝐞𝐫𝐢𝐟𝐲 𝐏𝐥𝐞𝐚𝐬𝐞</a>
-            </div>
-      
-            <div class="ad-container"><img src="hospital-banner.jpg" alt="Advertisement 3"></div>
-            <div class="ad-container"><img src="bike-banner.jpg" alt="Advertisement 4"></div>
-
-            <div class="content-box">
-                <h1>Fitness and Healthy Living: A Complete Guide</h1>
-                <p>In today’s fast-paced world, fitness is no longer just a trend—it has become a necessity.</p>
-                <h2>Eye Health and Vision Care: Protecting Your Sight</h2>
-                <p>Vision is one of the most vital senses, yet eye health is often overlooked until noticeable problems arise.</p>
+                <div class="action-section">
+                    <button id="timerButton" class="timer-btn">𝐏𝐥𝐞𝐚𝐬𝐞 𝐖𝐚𝐢𝐭... <span id="countdown">10</span>s</button>
+                    <br>
+                    <a href="javascript:void(0)" id="firstVerifyBtn" class="scroll-btn" onclick="showSecondVerify(event)">𝐕𝐞𝐫𝐢𝐟𝐲 𝐏𝐥𝐞𝐚𝐬𝐞</a>
+                </div>
             </div>
 
-            <div class="action-section" id="second-verify-section">
-                <a href="#third-continue-section" id="secondVerifyBtn" class="scroll-btn" onclick="showContinue(event)">𝐕𝐄𝐑𝐈𝐅𝐘 𝐀𝐆𝐀𝐈𝐍</a>
+            <!-- STEP 2 PORTION -->
+            <div id="step-2-section">
+                <div class="ad-container"><img src="hospital-banner.jpg" alt="Advertisement 3"></div>
+                <div class="ad-container"><img src="bike-banner.jpg" alt="Advertisement 4"></div>
+
+                <div class="content-box">
+                    <h1>Fitness and Healthy Living: A Complete Guide</h1>
+                    <p>In today’s fast-paced world, fitness is no longer just a trend—it has become a necessity.</p>
+                    <h2>Eye Health and Vision Care: Protecting Your Sight</h2>
+                    <p>Vision is one of the most vital senses, yet eye health is often overlooked until noticeable problems arise.</p>
+                </div>
+
+                <div class="action-section" id="second-verify-section">
+                    <!-- Timer and Verify Again Button JS dwara dynamic load hoga -->
+                </div>
             </div>
 
-            <div class="ad-container"><img src="hospital-banner.jpg" alt="Advertisement 5"></div>
-            <div class="ad-container"><img src="bike-banner.jpg" alt="Advertisement 6"></div>
+            <!-- STEP 3 PORTION -->
+            <div id="step-3-section">
+                <div class="ad-container"><img src="hospital-banner.jpg" alt="Advertisement 5"></div>
+                <div class="ad-container"><img src="bike-banner.jpg" alt="Advertisement 6"></div>
 
-            <div class="action-section" id="third-continue-section">
-                <a href="#" target="_blank" id="continueBtn" class="continue-btn">𝐆𝐞𝐭 𝐋𝐢𝐧𝐤</a>
+                <div class="action-section" id="third-continue-section">
+                    <a href="#" target="_blank" id="continueBtn" class="continue-btn" style="display:inline-block;">𝐆𝐞𝐭 𝐋𝐢𝐧𝐤</a>
+                </div>
+
+                <div class="ad-container"><img src="hospital-banner.jpg" alt="Advertisement 7"></div>
+                <div class="ad-container"><img src="bike-banner.jpg" alt="Advertisement 8"></div>
             </div>
-
-            <div class="ad-container"><img src="hospital-banner.jpg" alt="Advertisement 7"></div>
-            <div class="ad-container"><img src="bike-banner.jpg" alt="Advertisement 8"></div>
         </main>
 
     </div>
@@ -217,7 +229,6 @@
     const countdownEl = document.getElementById("countdown");
     const timerBtn = document.getElementById("timerButton");
     const firstVerifyBtn = document.getElementById("firstVerifyBtn");
-    const secondVerifyBtn = document.getElementById("secondVerifyBtn");
     const continueBtn = document.getElementById("continueBtn");
     const topFloatingBanner = document.getElementById("topFloatingBanner");
 
@@ -233,6 +244,7 @@
         }
     }
 
+    // 1. Pehla 10s Timer
     const timerInterval = setInterval(() => {
         timeLeft--;
         countdownEl.textContent = timeLeft;
@@ -246,17 +258,53 @@
         }
     }, 1000);
 
+    // 2. First Verify Click Logic
     function showSecondVerify(event) {
         event.preventDefault();
-        secondVerifyBtn.style.display = "inline-block";
-        document.getElementById("second-verify-section").scrollIntoView({ behavior: 'smooth' });
+        
+        firstVerifyBtn.innerText = "𝐒𝐜𝐫𝐨𝐥𝐥 𝐝𝐨𝐰𝐧";
+        firstVerifyBtn.style.backgroundColor = "#555";
+        firstVerifyBtn.style.cursor = "default";
+        firstVerifyBtn.onclick = null;
+
+        document.getElementById("step-2-section").style.display = "block";
+
+        const secondSection = document.getElementById("second-verify-section");
+        secondSection.innerHTML = `
+            <button id="secondTimerButton" class="timer-btn">𝐏𝐥𝐞𝐚𝐬𝐞 𝐖𝐚𝐢𝐭... <span id="secondCountdown">10</span>s</button>
+            <br>
+            <a href="javascript:void(0)" id="secondVerifyBtn" class="scroll-btn" onclick="showContinue(event)" style="display:none;">𝐕𝐄𝐑𝐈𝐅𝐘 𝐀𝐆𝐀𝐈𝐍</a>
+        `;
+
+        let secondTimeLeft = 10;
+        const secondCountdownEl = document.getElementById("secondCountdown");
+        const secondTimerBtn = document.getElementById("secondTimerButton");
+        const secondBtn = document.getElementById("secondVerifyBtn");
+
+        const secondTimerInterval = setInterval(() => {
+            secondTimeLeft--;
+            secondCountdownEl.textContent = secondTimeLeft;
+            if (secondTimeLeft <= 0) {
+                clearInterval(secondTimerInterval);
+                secondTimerBtn.style.display = "none";
+                secondBtn.style.display = "inline-block";
+            }
+        }, 1000);
     }
 
+    // 3. Second Verify Click Logic
     function showContinue(event) {
         event.preventDefault();
-        continueBtn.style.display = "inline-block";
-        document.getElementById("third-continue-section").scrollIntoView({ behavior: 'smooth' });
+        
+        const secondBtn = document.getElementById("secondVerifyBtn");
+        secondBtn.innerText = "𝐒𝐜𝐫𝐨𝐥𝐥 𝐝𝐨𝐰𝐧";
+        secondBtn.style.backgroundColor = "#555";
+        secondBtn.style.cursor = "default";
+        secondBtn.onclick = null;
+
+        document.getElementById("step-3-section").style.display = "block";
     }
     </script>
 </body>
-</html>
+    </html>
+    
