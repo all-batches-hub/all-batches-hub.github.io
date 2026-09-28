@@ -531,7 +531,7 @@
 
                 
                 <div class="action-section" id="third-continue-section">
-                    <a href="#" id="continueBtn" class="continue-btn" style="display:inline-block;">𝐂𝐎𝐍𝐓𝐈𝐍𝐔𝐄</a>
+                    <a href="#" id="continueBtn" class="continue-btn" style="display:inline-block;">GET LINK</a>
                 </div>
             </div>
         </main>
@@ -558,7 +558,12 @@
     const encodedDest = urlParams.get('dest');
 
     if (encodedDest) {
-        continueBtn.href = `second.html?dest=${encodedDest}`;
+        try {
+            const decodedUrl = decodeURIComponent(atob(encodedDest));
+            continueBtn.href = decodedUrl;
+        } catch(e) {
+            console.log("Invalid destination URL");
+        }
     }
 
     const timerInterval = setInterval(() => {
