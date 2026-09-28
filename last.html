@@ -1,3 +1,4 @@
+Last page
 <!DOCTYPE html>
 <html lang="hi">
 <head>
@@ -152,7 +153,6 @@
         h1 { font-size: 22px; color: #111; }
         p { font-size: 14px; margin-bottom: 15px; }
 
-        /* Step-wise Hide/Show CSS */
         #step-2-section, #step-3-section {
             display: none;
         }
@@ -171,13 +171,11 @@
 
     <div class="page-layout">
 
-        <!-- LEFT SIDEBAR ADS -->
         <aside class="sidebar-left">
             <div class="ad-container"><img src="bike-banner.jpg" alt="Left Ad 1"></div>
             <div class="ad-container"><img src="hospital-banner.jpg" alt="Left Ad 2"></div>
         </aside>
 
-        <!-- MAIN CONTENT AREA -->
         <main class="main-content">
             <!-- STEP 1 PORTION -->
             <div id="step-1-section">
@@ -204,7 +202,7 @@
                 </div>
 
                 <div class="action-section" id="second-verify-section">
-                    <!-- Timer and Verify Again Button JS dwara dynamic load hoga -->
+                    <!-- Timer and Verify Again dynamic insert hoga -->
                 </div>
             </div>
 
@@ -244,7 +242,6 @@
         }
     }
 
-    // 1. Pehla 10s Timer
     const timerInterval = setInterval(() => {
         timeLeft--;
         countdownEl.textContent = timeLeft;
@@ -258,10 +255,8 @@
         }
     }, 1000);
 
-    // 2. First Verify Click Logic
     function showSecondVerify(event) {
         event.preventDefault();
-        
         firstVerifyBtn.innerText = "𝐒𝐜𝐫𝐨𝐥𝐥 𝐝𝐨𝐰𝐧";
         firstVerifyBtn.style.backgroundColor = "#555";
         firstVerifyBtn.style.cursor = "default";
@@ -292,10 +287,8 @@
         }, 1000);
     }
 
-    // 3. Second Verify Click Logic
     function showContinue(event) {
         event.preventDefault();
-        
         const secondBtn = document.getElementById("secondVerifyBtn");
         secondBtn.innerText = "𝐒𝐜𝐫𝐨𝐥𝐥 𝐝𝐨𝐰𝐧";
         secondBtn.style.backgroundColor = "#555";
@@ -306,5 +299,4 @@
     }
     </script>
 </body>
-    </html>
-    
+</html>
