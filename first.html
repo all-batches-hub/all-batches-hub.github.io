@@ -17,7 +17,7 @@
 
         .page-layout {
             display: flex;
-            justify-content: flex-start;
+            justify-content: space-between;
             width: 100%;
             max-width: 100%;
             margin: 0;
@@ -26,7 +26,13 @@
             padding-left: 0;
         }
 
-        .sidebar-left {
+        .main-content {
+            flex: 1;
+            width: calc(100% - 320px);
+            max-width: none;
+        }
+
+        .sidebar-right {
             width: 300px;
             flex-shrink: 0;
             display: flex;
@@ -37,19 +43,14 @@
             height: fit-content;
         }
 
-        .main-content {
-            flex: 1;
-            width: calc(100% - 320px);
-            max-width: none;
-        }
-
+        /* Mobile aur Tablet par Sidebar chhupane ke liye */
         @media (max-width: 1024px) {
-            .sidebar-left {
-                display: none;
+            .sidebar-right {
+                display: none !important;
             }
             .main-content {
-                width: 100%;
-                max-width: 100%;
+                width: 100% !important;
+                max-width: 100% !important;
             }
         }
 
@@ -169,39 +170,21 @@
         <span>𝗧𝗼𝘁𝗮𝗹 𝗣𝗮𝗴𝗲𝘀- 𝟬𝟯</span>
     </div>
 
-
-
-
-
-
-
-
-
     <div class="page-layout">
-        <aside class="sidebar-right">
-            
 
-
-            
-
-
-        </aside>
-
-
-
-
-
+        <!-- MAIN CONTENT (LEFT SIDE) -->
         <main class="main-content">
             <!-- STEP 1 PORTION -->
             <div id="step-1-section">
                 <div class="ad-container"><iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe></div>
-                <div class="ad-container"><iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe></div>
-                <div class="ad-container"><iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe></div>
-                <div class="ad-container"><iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe></div>
+                <div class="ad-container"><img src="bike-banner.jpg" alt="Advertisement 2"></div>
+                <div class="ad-container"><img src="hospital-banner.jpg" alt="Advertisement 3"></div>
+                <div class="ad-container"><img src="bike-banner.jpg" alt="Advertisement 4"></div>
 
-                
- 
-                
+                <!-- Native Banner Place -->
+                <iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
+                <iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
+
                 <div class="action-section">
                     <button id="timerButton" class="timer-btn">𝐏𝐥𝐞𝐚𝐬𝐞 𝐖𝐚𝐢𝐭... <span id="countdown">10</span>s</button>
                     <br>
@@ -209,251 +192,105 @@
                 </div>
             </div>
 
+            <!-- Native Banner Place -->
+            <iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
+            <iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
 
-
-
-
-            
-
-
-
-
-            
             <!-- STEP 2 PORTION -->
             <div id="step-2-section">
-<div class="content-box">
-                    
-<h1>The Taj Mahal: An Eternal Monument of Love and Architectural Mastery</h1>
-<p>Standing majestically on the southern bank of the Yamuna River in Agra, Uttar Pradesh, the Taj Mahal is universally recognized as one of the most exquisite masterpieces of human heritage. Designated as a UNESCO World Heritage Site in 1983 and celebrated worldwide as one of the New Seven Wonders of the World, this ivory-white marble mausoleum attracts millions of travelers, historians, and art enthusiasts every year.</p>
-<h2>1. Historical Background and Creation</h2>
-<p>The Taj Mahal was commissioned in 1631 by the fifth Mughal Emperor, Shah Jahan, to house the tomb of his favorite wife, Mumtaz Mahal. She died during childbirth in Burhanpur while accompanying the emperor on a military campaign. Overcome with deep grief, Shah Jahan resolved to build a mausoleum so breathtaking that its beauty would remain unmatched throughout history.</p>
-<p>Construction began in 1632 and took approximately 22 years to complete, finishing around 1653. The grand project employed an estimated 20,000 artisans, masons, calligraphers, and stone carvers from across India, Persia, Central Asia, and the Ottoman Empire.</p>
-<h2>2. Architectural Grandeur and Design Elements</h2>
-<p>The architecture of the Taj Mahal represents the pinnacle of Mughal Architecture, a style that harmoniously blends Persian, Islamic, and Indian artistic traditions.</p><ul>
-  <li><strong>Symmetry and Proportions:</strong> The entire complex is constructed with perfect axial symmetry around the central mausoleum, with the notable exception of Shah Jahan's own grave, which was placed alongside Mumtaz Mahal’s after his death.</li>
-  <li><strong>The Main Dome:</strong> The central marble dome reaches a height of nearly 35 meters (115 feet) and is topped with a gilded finial. It is surrounded by four smaller domed kiosks (chhatris).</li>
-  <li><strong>The Minarets:</strong> Four 40-meter-tall towers frame the central structure. Designed with a subtle outward tilt, they ensure that in the event of an earthquake, the towers would fall away from the main tomb to protect the sacred structure.</li>
-  <li><strong>Inlay Work (Pietra Dura):</strong> The exterior and interior surfaces feature elaborate floral patterns inlaid with precious and semi-precious stones, including lapis lazuli, jade, turquoise, and carnelian, sourced from across Asia.</li>
-  <li><strong>Calligraphy:</strong> Intricate Islamic calligraphy in black marble accents the arches, featuring passages from the Quran designed with optical illusions so that the script appears uniform in size from bottom to top.</li></ul>
-<h2>3. The Grand Layout of the Complex</h2>
-<p>The Taj Mahal is part of a vast, meticulously organized complex divided into distinct sections:</p><ol>
-  <li><strong>Darwaza-i Rauza (The Main Gateway):</strong> A massive red sandstone structure adorned with delicate marble inlays that acts as a majestic transition from the secular world to the sacred grounds.</li>
-  <li><strong>Charbagh (The Mughal Garden):</strong> A classic Persian-style square garden divided into four quadrants by water channels representing the rivers of Paradise.</li>
-  <li><strong>The Mosque and Jawab:</strong> Two mirror-image red sandstone buildings flank the main mausoleum—the active mosque to the west and the Jawab (answer building) to the east, built primarily to maintain aesthetic symmetry.</li>
-  <li><strong>The Inner Chamber:</strong> Located at ground level, the central octagonal room houses the ceremonial cenotaphs of Mumtaz Mahal and Shah Jahan. The actual graves lie in a quiet, unadorned crypt below ground level.</li></ol>
-<h2>4. Cultural Significance and Legacy</h2>
-<p>Beyond its stunning aesthetic appeal, the Taj Mahal stands as a timeless symbol of devotion, artistic elegance, and enduring historical legacy. The white marble naturally reflects changing light throughout the day—appearing soft pink at dawn, brilliant white at noon, and golden under the moonlight—adding an almost ethereal charm to the experience of viewing it.</p>
-<p>Today, the Taj Mahal serves as a source of pride for India, reflecting a golden age of art and architectural innovation that continues to captivate the imagination of people across the globe.</p>
+                <div class="content-box">
+                    <h1>The Taj Mahal: An Eternal Monument of Love and Architectural Mastery</h1>
+                    <p>Standing majestically on the southern bank of the Yamuna River in Agra, Uttar Pradesh, the Taj Mahal is universally recognized as one of the most exquisite masterpieces of human heritage. Designated as a UNESCO World Heritage Site in 1983 and celebrated worldwide as one of the New Seven Wonders of the World, this ivory-white marble mausoleum attracts millions of travelers, historians, and art enthusiasts every year.</p>
+                    <h2>1. Historical Background and Creation</h2>
+                    <p>The Taj Mahal was commissioned in 1631 by the fifth Mughal Emperor, Shah Jahan, to house the tomb of his favorite wife, Mumtaz Mahal. She died during childbirth in Burhanpur while accompanying the emperor on a military campaign. Overcome with deep grief, Shah Jahan resolved to build a mausoleum so breathtaking that its beauty would remain unmatched throughout history.</p>
+                    <p>Construction began in 1632 and took approximately 22 years to complete, finishing around 1653. The grand project employed an estimated 20,000 artisans, masons, calligraphers, and stone carvers from across India, Persia, Central Asia, and the Ottoman Empire.</p>
+                    <h2>2. Architectural Grandeur and Design Elements</h2>
+                    <p>The architecture of the Taj Mahal represents the pinnacle of Mughal Architecture, a style that harmoniously blends Persian, Islamic, and Indian artistic traditions.</p>
+                    <ul>
+                      <li><strong>Symmetry and Proportions:</strong> The entire complex is constructed with perfect axial symmetry around the central mausoleum, with the notable exception of Shah Jahan's own grave, which was placed alongside Mumtaz Mahal’s after his death.</li>
+                      <li><strong>The Main Dome:</strong> The central marble dome reaches a height of nearly 35 meters (115 feet) and is topped with a gilded finial. It is surrounded by four smaller domed kiosks (chhatris).</li>
+                      <li><strong>The Minarets:</strong> Four 40-meter-tall towers frame the central structure. Designed with a subtle outward tilt, they ensure that in the event of an earthquake, the towers would fall away from the main tomb to protect the sacred structure.</li>
+                      <li><strong>Inlay Work (Pietra Dura):</strong> The exterior and interior surfaces feature elaborate floral patterns inlaid with precious and semi-precious stones, including lapis lazuli, jade, turquoise, and carnelian, sourced from across Asia.</li>
+                      <li><strong>Calligraphy:</strong> Intricate Islamic calligraphy in black marble accents the arches, featuring passages from the Quran designed with optical illusions so that the script appears uniform in size from bottom to top.</li>
+                    </ul>
+                    <h2>3. The Grand Layout of the Complex</h2>
+                    <p>The Taj Mahal is part of a vast, meticulously organized complex divided into distinct sections:</p>
+                    <ol>
+                      <li><strong>Darwaza-i Rauza (The Main Gateway):</strong> A massive red sandstone structure adorned with delicate marble inlays that acts as a majestic transition from the secular world to the sacred grounds.</li>
+                      <li><strong>Charbagh (The Mughal Garden):</strong> A classic Persian-style square garden divided into four quadrants by water channels representing the rivers of Paradise.</li>
+                      <li><strong>The Mosque and Jawab:</strong> Two mirror-image red sandstone buildings flank the main mausoleum—the active mosque to the west and the Jawab (answer building) to the east, built primarily to maintain aesthetic symmetry.</li>
+                      <li><strong>The Inner Chamber:</strong> Located at ground level, the central octagonal room houses the ceremonial cenotaphs of Mumtaz Mahal and Shah Jahan. The actual graves lie in a quiet, unadorned crypt below ground level.</li>
+                    </ol>
+                    <h2>4. Cultural Significance and Legacy</h2>
+                    <p>Beyond its stunning aesthetic appeal, the Taj Mahal stands as a timeless symbol of devotion, artistic elegance, and enduring historical legacy. The white marble naturally reflects changing light throughout the day—appearing soft pink at dawn, brilliant white at noon, and golden under the moonlight—adding an almost ethereal charm to the experience of viewing it.</p>
+                    <p>Today, the Taj Mahal serves as a source of pride for India, reflecting a golden age of art and architectural innovation that continues to captivate the imagination of people across the globe.</p>
+                </div>
 
-</div>
-
-
-
-
-<div class="content-box">
-    
-<h1>Varanasi: The Spiritual and Cultural Capital of India</h1>
-<p>Situated on the sacred banks of the Ganges River in Uttar Pradesh, Varanasi—also known as Kashi or Benares—is recognized as one of the oldest continually inhabited cities in the world. Revered as the ultimate spiritual destination in Hinduism, this ancient city offers an unmatchable blend of devotion, heritage, vibrant traditions, and timeless culture.</p>
-<h2>1. Historical and Religious Importance</h2>
-<p>Varanasi holds immense significance in Hindu mythology and philosophy. Believed to have been founded by Lord Shiva thousands of years ago, it is considered a place where the physical and spiritual realms meet. Millions of pilgrims visit Varanasi every year to bathe in the holy waters of the Ganges, perform sacred rituals, and seek liberation from the cycle of rebirth.</p>
-<p>The city has also been a major center for philosophy, mysticism, classical music, and literature for centuries, serving as a hub for scholars, saints, and poets like Kabir and Tulsidas.</p>
-<h2>2. Key Attractions and Landmarks</h2>
-<p>The soul of Varanasi resides along its iconic riverfront and bustling narrow alleys, filled with historical temples and cultural landmarks.</p><ul>
-  <li><strong>Kashi Vishwanath Temple:</strong> One of the most sacred Hindu temples dedicated to Lord Shiva, housing one of the twelve revered Jyotirlingas.</li>
-  <li><strong>The Ghats of Varanasi:</strong> The city features over 80 riverfront steps (ghats). Prominent among them are Dashashwamedh Ghat, known for its grand evening ceremonies, and Manikarnika Ghat, the central cremation ground.</li>
-  <li><strong>Sarnath:</strong> Located just a few kilometers from the main city, Sarnath is a world-famous Buddhist pilgrimage site where Lord Buddha delivered his first sermon after attaining enlightenment.</li>
-  <li><strong>Banaras Hindu University (BHU):</strong> One of Asia's largest residential universities, home to the iconic Bharat Kala Bhavan museum and the new Vishwanath Temple.</li></ul>
-<h2>3. The Iconic Ganga Aarti</h2>
-<p>One of the most captivating experiences in Varanasi is the daily Ganga Aarti held at sunset, primarily at Dashashwamedh Ghat. Priests perform choreographed rituals holding massive brass lamps, accompanied by chants, bells, and incense.</p>
-<p>Hundreds of devotees and tourists gather on the riverbank and aboard boats on the Ganges to witness this mesmerizing spiritual ritual, illuminating the night sky with light and devotion.</p>
-<h2>4. Culture, Crafts, and Culinary Delights</h2>
-<p>Varanasi is world-renowned for its rich artistic heritage and distinctive local cuisine.</p><ol>
-  <li><strong>Banarasi Silk Sarees:</strong> Famous globally for their intricate gold and silver brocade work (Zari), fine silk, and elaborate embroidery.</li>
-  <li><strong>Local Street Food:</strong> The culinary scene features iconic delicacies such as Kachori Sabzi, Malaiyo (a seasonal foamy sweet dish), Tamatar Chaat, and traditional Banarasi Lassi served in clay cups.</li>
-  <li><strong>Banarasi Paan:</strong> A famous traditional betel leaf preparation renowned across India for its unique blend of flavors.</li></ol>
- 
-</div>
-
-
-
+                <div class="content-box">
+                    <h1>Varanasi: The Spiritual and Cultural Capital of India</h1>
+                    <p>Situated on the sacred banks of the Ganges River in Uttar Pradesh, Varanasi—also known as Kashi or Benares—is recognized as one of the oldest continually inhabited cities in the world. Revered as the ultimate spiritual destination in Hinduism, this ancient city offers an unmatchable blend of devotion, heritage, vibrant traditions, and timeless culture.</p>
+                    <h2>1. Historical and Religious Importance</h2>
+                    <p>Varanasi holds immense significance in Hindu mythology and philosophy. Believed to have been founded by Lord Shiva thousands of years ago, it is considered a place where the physical and spiritual realms meet. Millions of pilgrims visit Varanasi every year to bathe in the holy waters of the Ganges, perform sacred rituals, and seek liberation from the cycle of rebirth.</p>
+                    <p>The city has also been a major center for philosophy, mysticism, classical music, and literature for centuries, serving as a hub for scholars, saints, and poets like Kabir and Tulsidas.</p>
+                    <h2>2. Key Attractions and Landmarks</h2>
+                    <p>The soul of Varanasi resides along its iconic riverfront and bustling narrow alleys, filled with historical temples and cultural landmarks.</p>
+                    <ul>
+                      <li><strong>Kashi Vishwanath Temple:</strong> One of the most sacred Hindu temples dedicated to Lord Shiva, housing one of the twelve revered Jyotirlingas.</li>
+                      <li><strong>The Ghats of Varanasi:</strong> The city features over 80 riverfront steps (ghats). Prominent among them are Dashashwamedh Ghat, known for its grand evening ceremonies, and Manikarnika Ghat, the central cremation ground.</li>
+                      <li><strong>Sarnath:</strong> Located just a few kilometers from the main city, Sarnath is a world-famous Buddhist pilgrimage site where Lord Buddha delivered his first sermon after attaining enlightenment.</li>
+                      <li><strong>Banaras Hindu University (BHU):</strong> One of Asia's largest residential universities, home to the iconic Bharat Kala Bhavan museum and the new Vishwanath Temple.</li>
+                    </ul>
+                    <h2>3. The Iconic Ganga Aarti</h2>
+                    <p>One of the most captivating experiences in Varanasi is the daily Ganga Aarti held at sunset, primarily at Dashashwamedh Ghat. Priests perform choreographed rituals holding massive brass lamps, accompanied by chants, bells, and incense.</p>
+                    <p>Hundreds of devotees and tourists gather on the riverbank and aboard boats on the Ganges to witness this mesmerizing spiritual ritual, illuminating the night sky with light and devotion.</p>
+                    <h2>4. Culture, Crafts, and Culinary Delights</h2>
+                    <p>Varanasi is world-renowned for its rich artistic heritage and distinctive local cuisine.</p>
+                    <ol>
+                      <li><strong>Banarasi Silk Sarees:</strong> Famous globally for their intricate gold and silver brocade work (Zari), fine silk, and elaborate embroidery.</li>
+                      <li><strong>Local Street Food:</strong> The culinary scene features iconic delicacies such as Kachori Sabzi, Malaiyo (a seasonal foamy sweet dish), Tamatar Chaat, and traditional Banarasi Lassi served in clay cups.</li>
+                      <li><strong>Banarasi Paan:</strong> A famous traditional betel leaf preparation renowned across India for its unique blend of flavors.</li>
+                    </ol>
+                </div>
 
                 <div class="ad-container"><img src="hospital-banner.jpg" alt="Advertisement 5"></div>
                 <div class="ad-container"><img src="bike-banner.jpg" alt="Advertisement 6"></div>
                 <div class="ad-container"><img src="hospital-banner.jpg" alt="Advertisement 7"></div>
                 <div class="ad-container"><img src="bike-banner.jpg" alt="Advertisement 8"></div>               
 
-                
                 <div class="action-section" id="second-verify-section">
                     <!-- Timer & Verify Again dynamic insert hoga -->
                 </div>
             </div>
 
-
-
-
-
-
-            
             <!-- STEP 3 PORTION -->
             <div id="step-3-section"> 
-
-<div class="content-box">
-    
-<h1>Jaipur: The Historic Pink City of Rajasthan</h1>
-<p>Located in the heart of Rajasthan, Jaipur—popularly known as the 'Pink City'—serves as the vibrant capital of India's most regal state. Founded in 1727 by Maharaja Sawai Jai Singh II, the city is world-renowned for its magnificent fortresses, lavish palaces, rich heritage, and distinctive terracotta-pink architecture that coats the walled city center.</p>
-<h2>1. Historical Foundations and Urban Planning</h2>
-<p>Jaipur holds a special place in architectural history as India's first planned city. Designed by Vidyadhar Bhattacharya using the principles of Vastu Shastra and ancient Indian treatise on architecture, the city was organized into a grid system with broad avenues dividing it into distinct blocks.</p>
-<p>In 1876, the entire city was painted pink to welcome HRH Albert Edward, Prince of Wales. The tradition has been preserved ever since, giving Jaipur its iconic aesthetic and UNESCO World Heritage status.</p>
-<h2>2. Iconic Palaces and Historical Monuments</h2>
-<p>The city's skyline is dominated by extraordinary examples of Rajputana architecture, blending Mughal and traditional Rajasthani styles.</p><ul>
-  <li><strong>Amber Fort:</strong> Situated atop the Cheel ka Teela (Hill of Eagles), this massive 16th-century fortress features stunning yellow sandstone walls, ornate courtyards, and the glittering Sheesh Mahal (Mirror Palace).</li>
-  <li><strong>Hawa Mahal (Palace of Winds):</strong> A unique five-story pink sandstone structure featuring 953 intricate small windows (jharokhas) designed to allow royal women to observe street festivals unnoticed while keeping the interior cool.</li>
-  <li><strong>City Palace:</strong> A breathtaking complex located in the center of the old city that continues to serve as the home of Jaipur’s former royal family, housing impressive museums displaying royal costumes, armor, and artwork.</li>
-  <li><strong>Jantar Mantar:</strong> A UNESCO World Heritage astronomical observatory constructed in the 18th century, housing the world's largest stone sundial.</li>
-  <li><strong>Nahargarh and Jaigarh Forts:</strong> Perched on the Aravalli hills, providing strategic defenses and sweeping panoramic views of the city below.</li></ul>
-<h2>3. Colorful Bazaars and Artisanal Heritage</h2>
-<p>Jaipur is an international hub for traditional handicrafts, gemstones, and textile printing, making it a paradise for shoppers and art lovers.</p><ol>
-  <li><strong>Hand-Block Printing:</strong> Globally celebrated for delicate Bagru and Sanganeri print textiles using natural dyes.</li>
-  <li><strong>Jewelry and Gemstones:</strong> World-famous markets like Johari Bazaar specialize in precious gemstone cutting, polki, and traditional Kundan jewelry.</li>
-  <li><strong>Handicrafts and Pottery:</strong> The city's markets, including Bapu Bazaar, offer signature Jaipur Blue Pottery, embroidered leather footwear (mojris), and brassware.</li></ol>
-<h2>4. Culture, Festivals, and Cuisine</h2>
-<p>The rich cultural fabric of Jaipur comes alive through its vibrant celebrations and legendary royal culinary tradition. Events like the annual Jaipur Literature Festival attract scholars and travelers from around the globe.</p>
-<p>Food lovers can indulge in authentic Rajasthani delicacies, including Dal Baati Churma, spicy Laal Maas, Ghevar, Pyaaz Kachori, and Mawa Kachori, served across historic eateries throughout the city.</p>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-<div class="content-box">
-    
-<h1>Goa: The Coastal Paradise of Sun, Sand, and Heritage</h1>
-<p>Located along India’s southwestern coast on the Arabian Sea, Goa is the country's smallest state by area but one of its most popular travel destinations. Famous worldwide for its pristine beaches, vibrant nightlife, Portuguese colonial heritage, and relaxed coastal culture, Goa offers a unique blend of Eastern and Western influences.</p>
-<h2>1. Historical Heritage and Colonial Legacy</h2>
-<p>Goa carries a distinct cultural identity shaped by over 450 years of Portuguese rule, which began in 1510. This long colonial presence left behind a rich architectural and cultural legacy visible in its grand churches, historic mansions, and distinctive cuisine.</p>
-<p>The historic quarter of <strong>Old Goa (Velha Goa)</strong> was once the capital of the Portuguese empire in the East and is now a UNESCO World Heritage Site featuring magnificent 16th and 17th-century cathedrals and convents.</p>
-<h2>2. Famous Beaches: North vs. South Goa</h2>
-<p>Goa's coastline stretches over 100 kilometers, divided into two distinct regions, each catering to different travel styles.</p><ul>
-  <li><strong>North Goa:</strong> Known for its energetic atmosphere, bustling flea markets, water sports, and famous nightlife hubs. Popular spots include Baga Beach, Calangute, Anjuna, and Vagator.</li>
-  <li><strong>South Goa:</strong> Preferred by travelers seeking tranquility, luxury resorts, and untouched natural beauty. Key beaches include Palolem, Colva, Benaulim, and Agonda.</li>
-  <li><strong>Water Sports:</strong> Thrill-seekers flock to the coast for parasailing, jet skiing, banana boat rides, and scuba diving along the reefs.</li></ul>
-<h2>3. Key Architectural and Natural Attractions</h2>
-<p>Beyond the coastline, Goa features historic forts, wildlife sanctuaries, and scenic waterfalls nested in the Western Ghats.</p><ol>
-  <li><strong>Basilica of Bom Jesus:</strong> A world-famous baroque church housing the mortal remains of St. Francis Xavier.</li>
-  <li><strong>Se Cathedral:</strong> One of the largest churches in Asia, built to commemorate a Portuguese victory.</li>
-  <li><strong>Aguada Fort:</strong> A 17th-century Portuguese fortress and lighthouse standing at the mouth of the Mandovi River with sweeping views of the sea.</li>
-  <li><strong>Dudhsagar Falls:</strong> A magnificent four-tiered waterfall located inside the Bhagwan Mahaveer Sanctuary, cascading down dark cliff faces like milk.</li></ol>
-<h2>4. Culture, Nightlife, and Goan Cuisine</h2>
-<p>Goa is renowned for its laid-back lifestyle, often referred to as <em>Susegad</em>—a concept representing peace, contentment, and relaxed living.</p>
-<p>The local culinary scene is heavily influenced by Portuguese flavors combined with local coastal spices. Signature dishes include Goan Fish Curry with rice, Pork Vindaloo, Xacuti, and the traditional layered dessert known as <strong>Bebinca</strong>.</p>                
-
-</div>
-
-
-
-
-                
-
-
-                <div class="ad-container"><img src="hospital-banner.jpg" alt="Advertisement 9"></div>
-                <div class="ad-container"><img src="bike-banner.jpg" alt="Advertisement 10"></div>
-                <div class="ad-container"><img src="hospital-banner.jpg" alt="Advertisement 11"></div>
-                <div class="ad-container"><img src="bike-banner.jpg" alt="Advertisement 12"></div>
-
-                
-                <div class="action-section" id="third-continue-section">
-                    <a href="#" id="continueBtn" class="continue-btn" style="display:inline-block;">𝐂𝐎𝐍𝐓𝐈𝐍𝐔𝐄</a>
+                <div class="content-box">
+                    <h1>Jaipur: The Historic Pink City of Rajasthan</h1>
+                    <p>Located in the heart of Rajasthan, Jaipur—popularly known as the 'Pink City'—serves as the vibrant capital of India's most regal state. Founded in 1727 by Maharaja Sawai Jai Singh II, the city is world-renowned for its magnificent fortresses, lavish palaces, rich heritage, and distinctive terracotta-pink architecture that coats the walled city center.</p>
+                    <h2>1. Historical Foundations and Urban Planning</h2>
+                    <p>Jaipur holds a special place in architectural history as India's first planned city. Designed by Vidyadhar Bhattacharya using the principles of Vastu Shastra and ancient Indian treatise on architecture, the city was organized into a grid system with broad avenues dividing it into distinct blocks.</p>
+                    <p>In 1876, the entire city was painted pink to welcome HRH Albert Edward, Prince of Wales. The tradition has been preserved ever since, giving Jaipur its iconic aesthetic and UNESCO World Heritage status.</p>
+                    <h2>2. Iconic Palaces and Historical Monuments</h2>
+                    <p>The city's skyline is dominated by extraordinary examples of Rajputana architecture, blending Mughal and traditional Rajasthani styles.</p>
+                    <ul>
+                      <li><strong>Amber Fort:</strong> Situated atop the Cheel ka Teela (Hill of Eagles), this massive 16th-century fortress features stunning yellow sandstone walls, ornate courtyards, and the glittering Sheesh Mahal (Mirror Palace).</li>
+                      <li><strong>Hawa Mahal (Palace of Winds):</strong> A unique five-story pink sandstone structure featuring 953 intricate small windows (jharokhas) designed to allow royal women to observe street festivals unnoticed while keeping the interior cool.</li>
+                      <li><strong>City Palace:</strong> A breathtaking complex located in the center of the old city that continues to serve as the home of Jaipur’s former royal family, housing impressive museums displaying royal costumes, armor, and artwork.</li>
+                      <li><strong>Jantar Mantar:</strong> A UNESCO World Heritage astronomical observatory constructed in the 18th century, housing the world's largest stone sundial.</li>
+                      <li><strong>Nahargarh and Jaigarh Forts:</strong> Perched on the Aravalli hills, providing strategic defenses and sweeping panoramic views of the city below.</li>
+                    </ul>
+                    <h2>3. Colorful Bazaars and Artisanal Heritage</h2>
+                    <p>Jaipur is an international hub for traditional handicrafts, gemstones, and textile printing, making it a paradise for shoppers and art lovers.</p>
+                    <ol>
+                      <li><strong>Hand-Block Printing:</strong> Globally celebrated for delicate Bagru and Sanganeri print textiles using natural dyes.</li>
+                      <li><strong>Jewelry and Gemstones:</strong> World-famous markets like Johari Bazaar specialize in precious gemstone cutting, polki, and traditional Kundan jewelry.</li>
+                      <li><strong>Handicrafts and Pottery:</strong> The city's markets, including Bapu Bazaar, offer signature Jaipur Blue Pottery, embroidered leather footwear (mojris), and brassware.</li>
+                    </ol>
+                    <h2>4. Culture, Festivals, and Cuisine</h2>
+                    <p>The rich cultural fabric of Jaipur comes alive through its vibrant celebrations and legendary royal culinary tradition. Events like the annual Jaipur Literature Festival attract scholars and travelers from around the globe.</p>
+                    <p>Food lovers can indulge in authentic Rajasthani delicacies, including Dal Baati Churma, spicy Laal Maas, Ghevar, Pyaaz Kachori, and Mawa Kachori, served across historic eateries throughout the city.</p>
                 </div>
-            </div>
-        </main>
-    </div>
 
-
-
-
-
-
-
-
-
-    
-    <script>
-    let timeLeft = 10;
-    const countdownEl = document.getElementById("countdown");
-    const timerBtn = document.getElementById("timerButton");
-    const firstVerifyBtn = document.getElementById("firstVerifyBtn");
-    const continueBtn = document.getElementById("continueBtn");
-    const topFloatingBanner = document.getElementById("topFloatingBanner");
-
-    const urlParams = new URLSearchParams(window.location.search);
-    const encodedDest = urlParams.get('dest');
-
-    if (encodedDest) {
-        continueBtn.href = `second.html?dest=${encodedDest}`;
-    }
-
-    const timerInterval = setInterval(() => {
-        timeLeft--;
-        countdownEl.textContent = timeLeft;
-        if (timeLeft <= 0) {
-            clearInterval(timerInterval);
-            timerBtn.style.display = "none";
-            firstVerifyBtn.style.display = "inline-block";
-            if (topFloatingBanner) {
-                topFloatingBanner.style.display = "none";
-            }
-        }
-    }, 1000);
-
-    function showSecondVerify(event) {
-        event.preventDefault();
-        firstVerifyBtn.innerText = "𝐒𝐜𝐫𝐨𝐥𝐥 𝐝𝐨𝐰𝐧";
-        firstVerifyBtn.style.backgroundColor = "#555";
-        firstVerifyBtn.style.cursor = "default";
-        firstVerifyBtn.onclick = null;
-
-        document.getElementById("step-2-section").style.display = "block";
-
-        const secondSection = document.getElementById("second-verify-section");
-        secondSection.innerHTML = `
-            <button id="secondTimerButton" class="timer-btn">𝐏𝐥𝐞𝐚𝐬𝐞 𝐖𝐚𝐢𝐭... <span id="secondCountdown">10</span>s</button>
-            <br>
-            <a href="javascript:void(0)" id="secondVerifyBtn" class="scroll-btn" onclick="showContinue(event)" style="display:none;">𝐕𝐄𝐑𝐈𝐅𝐘 𝐀𝐆𝐀𝐈𝐍</a>
-        `;
-
-        let secondTimeLeft = 10;
-        const secondCountdownEl = document.getElementById("secondCountdown");
-        const secondTimerBtn = document.getElementById("secondTimerButton");
-        const secondBtn = document.getElementById("secondVerifyBtn");
-
-        const secondTimerInterval = setInterval(() => {
-            secondTimeLeft--;
-            secondCountdownEl.textContent = secondTimeLeft;
-            if (secondTimeLeft <= 0) {
-                clearInterval(secondTimerInterval);
-                secondTimerBtn.style.display = "none";
-                secondBtn.style.display = "inline-block";
-            }
-        }, 1000);
-    }
-
-    function showContinue(event) {
-        event.preventDefault();
-        const secondBtn = document.getElementById("secondVerifyBtn");
-        secondBtn.innerText = "𝐒𝐜𝐫𝐨𝐥𝐥 𝐝𝐨𝐰𝐧";
-        secondBtn.style.backgroundColor = "#555";
-        secondBtn.style.cursor = "default";
-        secondBtn.onclick = null;
-
-        document.getElementById("step-3-section").style.display = "block";
-    }
-    </script>
-</body>
-</html>
+                <div class="content-box">
+                    <h1>Goa: The Coastal Paradise of Sun, Sand, and Heritage</h1>
+                    <p>Located along India’s southwestern coast on the Arabian Sea, Goa is the country's smallest state by area but one of its most popular travel destinations. Famous worldwide for its pristine beaches, vibrant nightlife, Portuguese colonial heritage, and relaxed coastal culture, Goa offers a unique blend of Eastern and Weste
