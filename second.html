@@ -15,6 +15,7 @@
             scroll-behavior: smooth;
         }
 
+        /* Top Floating Banner & Page Counter Styles */
         .floating-banner {
             position: fixed;
             top: 42px;
@@ -56,6 +57,7 @@
             border: 1px solid #ddd;
         }
 
+        /* MAIN LAYOUT WRAPPER */
         .page-layout {
             display: flex !important;
             flex-direction: row !important;
@@ -69,11 +71,13 @@
             padding-right: 10px;
         }
 
+        /* Left Side Content Area */
         .main-content {
             flex: 1 !important;
             min-width: 0 !important;
         }
 
+        /* Right Side Sidebar (Only on Desktop) */
         .sidebar-right {
             width: 300px !important;
             flex-shrink: 0 !important;
@@ -84,7 +88,7 @@
             top: 60px !important;
         }
 
-        /* Responsive Sidebar Rule */
+        /* MOBILE RESPONSIVE RULE: Mobile Screens (< 1024px) par Sidebar hide hoga */
         @media screen and (max-width: 1024px) {
             .sidebar-right {
                 display: none !important;
@@ -98,6 +102,7 @@
             }
         }
 
+        /* Content & Ad Box Styles */
         .ad-container {
             text-align: center;
             background: #fff;
@@ -106,9 +111,9 @@
             border-top: 1px solid #ddd;
             border-bottom: 1px solid #ddd;
         }
-        .ad-container img {
+        .ad-container iframe {
             max-width: 100%;
-            height: auto;
+            border: none;
         }
         .action-section {
             text-align: center;
@@ -158,6 +163,7 @@
         h1 { font-size: 22px; color: #111; }
         p { font-size: 14px; margin-bottom: 15px; }
 
+        /* Step Visibility Control */
         #step-2-section, #step-3-section {
             display: none;
         }
@@ -165,6 +171,7 @@
 </head>
 <body>
 
+    <!-- TOP FLOATING BANNERS -->
     <div id="topFloatingBanner" class="floating-banner">
          Site ko अच्छी तरह से लोड होने दीजिये , उसके बाद ही Scroll कीजिये l
     </div>
@@ -174,31 +181,35 @@
         <span>𝗧𝗼𝘁𝗮𝗹 𝗣𝗮𝗴𝗲𝘀- 𝟬𝟯</span>
     </div>
 
+    <!-- MAIN PAGE WRAPPER START -->
     <div class="page-layout">
+
+        <!-- LEFT SIDE MAIN CONTENT -->
         <main class="main-content">
 
             <!-- STEP 1 PORTION -->
             <div id="step-1-section">
                 <div class="ad-container">
-                    <iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
-                    <iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
+                    <iframe src="ad-native.html" width="100%" height="250" scrolling="no"></iframe>
+                    <iframe src="ad-native.html" width="100%" height="250" scrolling="no"></iframe>
                 </div>
 
                 <div class="content-box">
                     <h1>Ladakh: The Land of High Passes and Majestic Landscapes</h1>
-                    <p>Nestled high in the Indian Himalayas, Ladakh is a breathtaking Union Territory known for its dramatic high-altitude desert landscapes, crystal-clear lakes, snow-capped peaks, and deep-rooted Tibetan Buddhist culture.</p>
+                    <p>Nestled high in the Indian Himalayas, Ladakh is a breathtaking Union Territory known for its dramatic high-altitude desert landscapes, crystal-clear lakes, snow-capped peaks, and deep-rooted Tibetan Buddhist culture. Situated over 3,000 meters above sea level, Ladakh offers an unparalleled experience for adventure seekers, nature lovers, and spiritual travelers alike.</p>
                     <h2>1. Geography and High-Altitude Wonders</h2>
-                    <p>Ladakh's terrain is uniquely characterized by stark mountain ranges, deep river valleys, and vast open plateaus.</p>
+                    <p>Ladakh's terrain is uniquely characterized by stark mountain ranges, deep river valleys, and vast open plateaus. Surrounded by the Karakoram range to the north and the Zanskar range to the south, the region features some of the highest motorable roads in the world, including the famous Khardung La and Umling La passes.</p>
                     <h2>2. Key Attractions and High-Altitude Lakes</h2>
                     <ul>
-                      <li><strong>Pangong Tso Lake:</strong> A world-famous endorheic lake located at an altitude of 4,350 meters.</li>
-                      <li><strong>Nubra Valley:</strong> Famous for its double-humped Bactrian camels and white sand dunes.</li>
-                      <li><strong>Magnetic Hill:</strong> A gravity-defying stretch of road near Leh.</li>
+                      <li><strong>Pangong Tso Lake:</strong> A world-famous endorheic lake located at an altitude of 4,350 meters, known for changing its colors from shades of azure to deep blue.</li>
+                      <li><strong>Nubra Valley:</strong> A high-altitude cold desert famous for its double-humped Bactrian camels and white sand dunes.</li>
+                      <li><strong>Magnetic Hill:</strong> A gravity-defying stretch of road near Leh where vehicles appear to roll uphill against gravity.</li>
                     </ul>
                 </div>
 
                 <div class="ad-container">
-                    <iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
+                    <iframe src="ad-native.html" width="100%" height="250" scrolling="no"></iframe>
+                    <iframe src="ad-native.html" width="100%" height="250" scrolling="no"></iframe>
                 </div>  
 
                 <div class="action-section">
@@ -210,27 +221,34 @@
 
             <!-- STEP 2 PORTION -->
             <div id="step-2-section">
+                <div class="ad-container">
+                    <iframe src="ad-native.html" width="100%" height="250" scrolling="no"></iframe>
+                </div>
                 <div class="content-box">
                     <h1>Kerala: God's Own Country</h1>
-                    <p>Located on the tropical Malabar Coast of southwestern India, Kerala is universally known as "God's Own Country." Famed for its palm-fringed beaches, tranquil backwaters, and Ayurvedic wellness.</p>
+                    <p>Located on the tropical Malabar Coast of southwestern India, Kerala is universally known as "God's Own Country." Famed for its palm-fringed beaches, tranquil backwaters, lush hill stations, and rich cultural heritage, Kerala offers a serene and refreshing escape into nature.</p>
+                    <h2>1. The World-Famous Backwaters and Houseboats</h2>
+                    <p>The backwaters of Kerala form a unique network of interconnected canals, rivers, lakes, and inlets extending over 900 kilometers parallel to the Arabian Sea coast.</p>
                 </div>
 
                 <div class="ad-container">
-                    <iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
+                    <iframe src="ad-native.html" width="100%" height="250" scrolling="no"></iframe>
                 </div>            
 
-                <div class="action-section" id="second-verify-section"></div>
+                <div class="action-section" id="second-verify-section">
+                    <!-- Dynamic timer/verify button will append here -->
+                </div>
             </div>
 
             <!-- STEP 3 PORTION -->
             <div id="step-3-section"> 
                 <div class="content-box">
                     <h1>Manali: The Enchanting Haven of the Himalayas</h1>
-                    <p>Perched at an altitude of over 2,000 meters in the Kullu Valley of Himachal Pradesh, Manali is one of India's most celebrated hill stations.</p>
+                    <p>Perched at an altitude of over 2,000 meters in the Kullu Valley of Himachal Pradesh, Manali is one of India's most celebrated hill stations. Surrounded by towering snow-capped peaks and dense pine forests.</p>
                 </div>
 
                 <div class="ad-container">
-                    <iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
+                    <iframe src="ad-native.html" width="100%" height="250" scrolling="no"></iframe>
                 </div>      
 
                 <div class="action-section" id="third-continue-section">
@@ -238,17 +256,20 @@
                 </div>
             </div>
 
-        </main>
+        </main> <!-- MAIN CONTENT END -->
 
+        <!-- RIGHT SIDEBAR (SIRF DESKTOP PAR DIKHEGA) -->
         <aside class="sidebar-right">
-            <div class="ad-container"><iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe></div>
-            <div class="ad-container"><iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe></div>
-        </aside>
-    </div>
+            <div class="ad-container"><iframe src="ad-native.html" width="100%" height="250" scrolling="no"></iframe></div>
+            <div class="ad-container"><iframe src="ad-native.html" width="100%" height="250" scrolling="no"></iframe></div>
+            <div class="ad-container"><iframe src="ad-native.html" width="100%" height="250" scrolling="no"></iframe></div>
+        </aside> <!-- SIDEBAR END -->
+
+    </div> <!-- MAIN PAGE WRAPPER END -->
 
     <!-- JAVASCRIPT LOGIC -->
     <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener("load", function() {
         let timeLeft = 10;
         const countdownEl = document.getElementById("countdown");
         const timerBtn = document.getElementById("timerButton");
@@ -256,16 +277,18 @@
         const continueBtn = document.getElementById("continueBtn");
         const topFloatingBanner = document.getElementById("topFloatingBanner");
 
+        // Target URL parameter logic
         const urlParams = new URLSearchParams(window.location.search);
         const encodedDest = urlParams.get('dest');
-
         if (encodedDest && continueBtn) {
-            continueBtn.href = `last.html?dest=${encodedDest}`;
+            continueBtn.href = "last.html?dest=" + encodedDest;
         }
 
-        const timerInterval = setInterval(() => {
+        // STEP 1 TIMER LOGIC
+        const timerInterval = setInterval(function() {
             timeLeft--;
             if (countdownEl) countdownEl.textContent = timeLeft;
+            
             if (timeLeft <= 0) {
                 clearInterval(timerInterval);
                 if (timerBtn) timerBtn.style.display = "none";
@@ -274,8 +297,9 @@
             }
         }, 1000);
 
+        // STEP 1 CLICK -> STEP 2 SHOW
         if (firstVerifyBtn) {
-            firstVerifyBtn.addEventListener("click", function(e) {
+            firstVerifyBtn.onclick = function(e) {
                 e.preventDefault();
                 firstVerifyBtn.innerText = "𝐒𝐜𝐫𝐨𝐥𝐥 𝐝𝐨𝐰𝐧";
                 firstVerifyBtn.style.backgroundColor = "#555";
@@ -291,14 +315,16 @@
                     <a href="javascript:void(0)" id="secondVerifyBtn" class="scroll-btn" style="display:none;">𝐕𝐄𝐑𝐈𝐅𝐘 𝐀𝐆𝐀𝐈𝐍</a>
                 `;
 
+                // STEP 2 TIMER LOGIC
                 let secondTimeLeft = 10;
                 const secondCountdownEl = document.getElementById("secondCountdown");
                 const secondTimerBtn = document.getElementById("secondTimerButton");
                 const secondBtn = document.getElementById("secondVerifyBtn");
 
-                const secondTimerInterval = setInterval(() => {
+                const secondTimerInterval = setInterval(function() {
                     secondTimeLeft--;
                     if (secondCountdownEl) secondCountdownEl.textContent = secondTimeLeft;
+
                     if (secondTimeLeft <= 0) {
                         clearInterval(secondTimerInterval);
                         if (secondTimerBtn) secondTimerBtn.style.display = "none";
@@ -306,16 +332,19 @@
                     }
                 }, 1000);
 
+                // STEP 2 CLICK -> STEP 3 SHOW
                 if (secondBtn) {
-                    secondBtn.addEventListener("click", function(ev) {
+                    secondBtn.onclick = function(ev) {
                         ev.preventDefault();
                         secondBtn.innerText = "𝐒𝐜𝐫𝐨𝐥𝐥 𝐝𝐨𝐰𝐧";
                         secondBtn.style.backgroundColor = "#555";
                         secondBtn.style.cursor = "default";
+                        secondBtn.onclick = null;
+
                         document.getElementById("step-3-section").style.display = "block";
-                    });
+                    };
                 }
-            });
+            };
         }
     });
     </script>
