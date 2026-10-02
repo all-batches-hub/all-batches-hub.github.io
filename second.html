@@ -199,6 +199,9 @@
         </aside>
     </div>
 
+
+
+
     <script>
     let timeLeft = 10;
     const countdownEl = document.getElementById("countdown");
@@ -207,12 +210,12 @@
     const continueBtn = document.getElementById("continueBtn");
     const topFloatingBanner = document.getElementById("topFloatingBanner");
 
-    const urlParams = new URLSearchParams(window.location.search);
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
     const encodedDest = urlParams.get('dest');
 
-    // Page 2 se continue hone par 'last.html' par bhejega aur dest parameter sath rakhega
     if (encodedDest) {
-        continueBtn.href = `last.html?dest=${encodedDest}`;
+        continueBtn.href = `last.html${queryString}`;
     } else {
         continueBtn.href = `last.html`;
     }
@@ -271,6 +274,7 @@
         document.getElementById("step-3-section").style.display = "block";
     }
     </script>
+    
 </body>
     </html>
     
