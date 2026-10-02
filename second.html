@@ -314,4 +314,144 @@
                     <h2>1. Panoramic Views and Natural Attractions</h2>
                     <p>Darjeeling’s landscape is defined by dramatic mountain ridges, dense pine forests, and misty valleys that offer some of the most spectacular views in the eastern Himalayas.</p>
                     <ul>
-                      <li><strong>Tiger Hill:</strong> Located at a height of 2,590 meters, this vantage point attracts early-morning visitors to witness breathtaking sunrises, where the first 
+                      <li><strong>Tiger Hill:</strong> Located at a height of 2,590 meters, this vantage point attracts early-morning visitors to witness breathtaking sunrises, where the first rays of light illuminate the snow-covered peaks of Mount Kanchenjunga and Mount Everest in brilliant shades of gold and pink.</li>
+                      <li><strong>Batasia Loop and War Memorial:</strong> A scenic spiral railway loop where the Toy Train negotiates a steep gradient, offering a 360-degree panoramic view of Darjeeling with a memorial honoring Gorkha soldiers at its center.</li>
+                      <li><strong>Rock Garden and Ganga Maya Park:</strong> Terraced gardens cut through natural rocks with cascading waterfalls, streams, and walking paths.</li>
+                    </ul>
+                    <h2>2. World-Famous Darjeeling Tea Gardens</h2>
+                    <p>Often hailed as the "Champagne of Teas," Darjeeling tea is globally prized for its floral aroma and delicate muscatel flavor. The region houses over 80 operational tea estates covering rolling hillsides.</p>
+                    <ul>
+                      <li><strong>Happy Valley Tea Estate:</strong> Established in 1854, it is one of the oldest and highest tea gardens in Darjeeling, offering guided walking tours through fresh tea bushes and live processing demonstrations inside the factory.</li>
+                    </ul>
+                    <h2>3. Heritage, Railways, and Exploration</h2>
+                    <p>Darjeeling possesses a unique blend of Victorian colonial architecture, Tibetan Buddhist monasteries, and historic mountaineering traditions.</p>
+                    <ol>
+                      <li><strong>Darjeeling Himalayan Railway (Toy Train):</strong> A UNESCO World Heritage Site operational since 1881, famous for its steam-powered locomotives chugging through narrow mountain tracks and bustling town markets.</li>
+                      <li><strong>Himalayan Mountaineering Institute (HMI) & Padmaja Naidu Himalayan Zoological Park:</strong> Established to encourage mountaineering, housing a famous museum alongside a specialized zoo dedicated to breeding endangered high-altitude wildlife like the Red Panda and Snow Leopard.</li>
+                      <li><strong>Peace Pagoda and Monasteries:</strong> Iconic spiritual landmarks like the Japanese Peace Pagoda and Ghum Monastery (Yiga Choeling) reflecting deep-rooted Buddhist heritage.</li>
+                    </ol>
+                    <h2>4. Culture, People, and Himalayan Cuisine</h2>
+                    <p>The cultural atmosphere of Darjeeling is a rich tapestry woven by the Gorkha, Nepalese, Tibetan, and Bengali communities living in harmony.</p>
+                    <p>Visitors can enjoy popular regional delicacies influenced by Tibetan and Nepalese traditions, including hot steamed <strong>Momos</strong>, flavor-packed bowls of <strong>Thukpa</strong>, traditional <strong>Chhurpi</strong> (hard yak cheese), and fresh pots of Darjeeling tea in cozy mountain cafes.</p>
+                </div>
+
+                <div class="ad-container">
+                    <iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
+                    <iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
+                    <iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
+                </div>      
+
+                <div class="action-section" id="third-continue-section">
+                    <a href="#" id="continueBtn" class="continue-btn" style="display:inline-block;">𝐂𝐎𝐍𝐓𝐈𝐍𝐔𝐄</a>
+                </div>
+            </div>
+
+        </main> <!-- MAIN CONTENT END -->
+
+        <!-- RIGHT SIDEBAR (SIRF DESKTOP PAR DIKHEGA) -->
+        <aside class="sidebar-right">
+            <div class="ad-container">
+                <iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
+            </div>
+            <div class="ad-container">
+                <iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
+            </div>
+            <div class="ad-container">
+                <iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
+            </div>
+            <div class="ad-container">
+                <iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
+            </div>
+            <div class="ad-container">
+                <iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
+            </div>
+            <div class="ad-container">
+                <iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
+            </div>
+            <div class="ad-container">
+                <iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
+            </div>
+            <div class="ad-container">
+                <iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
+            </div>
+            <div class="ad-container">
+                <iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </aside> <!-- SIDEBAR END -->
+
+    </div> <!-- MAIN PAGE WRAPPER END -->
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+    let timeLeft = 10;
+    const countdownEl = document.getElementById("countdown");
+    const timerBtn = document.getElementById("timerButton");
+    const firstVerifyBtn = document.getElementById("firstVerifyBtn");
+    const continueBtn = document.getElementById("continueBtn");
+    const topFloatingBanner = document.getElementById("topFloatingBanner");
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const encodedDest = urlParams.get('dest');
+
+    if (encodedDest) {
+        continueBtn.href = `last.html?dest=${encodedDest}`;
+    }
+
+    const timerInterval = setInterval(() => {
+        timeLeft--;
+        countdownEl.textContent = timeLeft;
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            timerBtn.style.display = "none";
+            firstVerifyBtn.style.display = "inline-block";
+            if (topFloatingBanner) {
+                topFloatingBanner.style.display = "none";
+            }
+        }
+    }, 1000);
+
+    function showSecondVerify(event) {
+        event.preventDefault();
+        firstVerifyBtn.innerText = "𝐒𝐜𝐫𝐨𝐥𝐥 𝐝𝐨𝐰𝐧";
+        firstVerifyBtn.style.backgroundColor = "#555";
+        firstVerifyBtn.style.cursor = "default";
+        firstVerifyBtn.onclick = null;
+
+        document.getElementById("step-2-section").style.display = "block";
+
+        const secondSection = document.getElementById("second-verify-section");
+        secondSection.innerHTML = `
+            <button id="secondTimerButton" class="timer-btn">𝐏𝐥𝐞𝐚𝐬𝐞 𝐖𝐚𝐢𝐭... <span id="secondCountdown">10</span>s</button>
+            <br>
+            <a href="javascript:void(0)" id="secondVerifyBtn" class="scroll-btn" onclick="showContinue(event)" style="display:none;">𝐕𝐄𝐑𝐈𝐅𝐘 𝐀𝐆𝐀𝐈𝐍</a>
+        `;
+
+        let secondTimeLeft = 10;
+        const secondCountdownEl = document.getElementById("secondCountdown");
+        const secondTimerBtn = document.getElementById("secondTimerButton");
+        const secondBtn = document.getElementById("secondVerifyBtn");
+
+        const secondTimerInterval = setInterval(() => {
+            secondTimeLeft--;
+            secondCountdownEl.textContent = secondTimeLeft;
+            if (secondTimeLeft <= 0) {
+                clearInterval(secondTimerInterval);
+                secondTimerBtn.style.display = "none";
+                secondBtn.style.display = "inline-block";
+            }
+        }, 1000);
+    }
+
+    function showContinue(event) {
+        event.preventDefault();
+        const secondBtn = document.getElementById("secondVerifyBtn");
+        secondBtn.innerText = "𝐒𝐜𝐫𝐨𝐥𝐥 𝐝𝐨𝐰𝐧";
+        secondBtn.style.backgroundColor = "#555";
+        secondBtn.style.cursor = "default";
+        secondBtn.onclick = null;
+
+        document.getElementById("step-3-section").style.display = "block";
+    }
+    </script>
+</body>
+</html>
