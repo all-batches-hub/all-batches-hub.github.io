@@ -207,12 +207,18 @@
     const urlParams = new URLSearchParams(window.location.search);
     const encodedDest = urlParams.get('dest');
 
-    // Final redirection function jo user ko asli destination par bhejegi
+    // Final redirection function jo Base64 aur encoded URL ko decode karegi
     function redirectToDestination(event) {
         event.preventDefault();
         if (encodedDest) {
-            // Agar dest URL encoded hai toh decode karke redirect karein, ya direct
-            window.location.href = decodeURIComponent(encodedDest);
+            try {
+                // index.html ki btoa(encodeURIComponent(...)) ko decode karna
+                const decodedUrl = decodeURIComponent(atob(encodedDest));
+                window.location.href = decodedUrl;
+            } catch (e) {
+                // Agar kabhi plain URL ho toh direct redirect karein
+                window.location.href = encodedDest;
+            }
         } else {
             alert('Destination link not found!');
         }
@@ -271,6 +277,7 @@
 
         document.getElementById("step-3-section").style.display = "block";
     }
-    </script>
+</script>
+
 </body>
 </html>
