@@ -171,7 +171,6 @@
 </head>
 <body>
 
-    <!-- TOP FLOATING BANNERS -->
     <div id="topFloatingBanner" class="floating-banner">
          Site ko अच्छी तरह से लोड होने दीजिये , उसके बाद ही Scroll कीजिये l
     </div>
@@ -181,12 +180,8 @@
         <span>𝗧𝗼𝘁𝗮𝗹 𝗣𝗮𝗴𝗲𝘀- 𝟬𝟯</span>
     </div>
 
-    <!-- MAIN PAGE WRAPPER START -->
     <div class="page-layout">
-
-        <!-- LEFT SIDE MAIN CONTENT -->
         <main class="main-content">
-
             <!-- STEP 1 PORTION -->
             <div id="step-1-section">                
                 <div class="ad-container">
@@ -220,11 +215,6 @@
                     <h2>4. Adventure Tourism and Local Culture</h2>
                     <p>Ladakh is an international hub for adventure activities, attracting bikers, trekkers, and rafters from around the globe. Popular routes include the Leh-Manali and Leh-Srinagar highway bike trips, as well as the thrilling Chadar Trek across the frozen Zanskar River in winter.</p>
                     <p>The warm and hospitable Ladakhi people live a peaceful lifestyle influenced by ancient traditions. Visitors can enjoy local Tibetan-influenced delicacies such as Thukpa (noodle soup), Momos, Butter Tea (Gur Gur Chai), and Skyu, a traditional Ladakhi pasta stew.</p>
-                </div>
-
-                <div class="ad-container">
-                    <iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
-                    <iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
                 </div>
 
                 <div class="action-section">
@@ -265,6 +255,7 @@
                 </div>
 
                 <div class="ad-container">
+                    <iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
                     <iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
                     <iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
                 </div>
@@ -332,15 +323,16 @@
                 <div class="ad-container">
                     <iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
                     <iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
+                    <iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
                 </div>
-
+                
                 <div class="action-section" id="third-continue-section">
                     <a href="#" id="continueBtn" class="continue-btn" style="display:inline-block;">𝐂𝐎𝐍𝐓𝐈𝐍𝐔𝐄</a>
                 </div>
             </div>
-        </main> <!-- MAIN CONTENT END -->
+        </main>
 
-        <!-- RIGHT SIDEBAR (DESKTOP ONLY) -->
+        <!-- RIGHT SIDEBAR -->
         <aside class="sidebar-right">
             <div class="ad-container"><iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe></div>
             <div class="ad-container"><iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe></div>
@@ -351,12 +343,9 @@
             <div class="ad-container"><iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe></div>
             <div class="ad-container"><iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe></div>
             <div class="ad-container"><iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe></div>
-            <div class="ad-container"><iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe></div>
-        </aside> <!-- SIDEBAR END -->
+        </aside>
+    </div>
 
-    </div> <!-- MAIN PAGE WRAPPER END -->
-
-    <!-- JAVASCRIPT LOGIC -->
     <script>
     let timeLeft = 10;
     const countdownEl = document.getElementById("countdown");
@@ -369,6 +358,7 @@
     const encodedDest = urlParams.get('dest');
 
     if (encodedDest) {
+        // Fix: Passing dest to last.html
         continueBtn.href = `last.html?dest=${encodedDest}`;
     }
 
