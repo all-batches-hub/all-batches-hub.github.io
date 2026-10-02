@@ -389,11 +389,16 @@
     const continueBtn = document.getElementById("continueBtn");
     const topFloatingBanner = document.getElementById("topFloatingBanner");
 
-    const urlParams = new URLSearchParams(window.location.search);
+    // Sare URL parameters ko read karein
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
     const encodedDest = urlParams.get('dest');
 
+    // Agar destination hai, toh aage ke pages ke liye parameters pass karein
     if (encodedDest) {
-        continueBtn.href = `second.html?dest=${encodedDest}`;
+        continueBtn.href = `second.html${queryString}`;
+    } else {
+        continueBtn.href = `second.html`;
     }
 
     const timerInterval = setInterval(() => {
@@ -451,6 +456,7 @@
 
         document.getElementById("step-3-section").style.display = "block";
     }
-    </script>
+</script>
+
 </body>
 </html>
